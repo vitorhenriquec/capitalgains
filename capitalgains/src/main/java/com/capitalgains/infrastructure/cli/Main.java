@@ -9,13 +9,11 @@ import com.capitalgains.domain.usecase.LineReaderUseCaseImpl;
 import java.util.List;
 
 public class Main {
-    private static LineReaderUseCase lineReader = new LineReaderUseCaseImpl();
+    private static final LineReaderUseCase lineReader = new LineReaderUseCaseImpl();
 
     public static void main(String[] args) {
 
-        List<List<TradeOrder>> tradeOrders = lineReader.processLines(args);
-
-        for(List<TradeOrder> tradeOrder: tradeOrders) {
+        for(List<TradeOrder> tradeOrder: lineReader.processLines(args)) {
 
             CalculatorUseCase taxCaculator = new CalculatorUseCaseImpl();
 
