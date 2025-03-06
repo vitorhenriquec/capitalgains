@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public record TradeOrder(
         @JsonProperty("operation")
-        TradeOperationType operation,
+        OperationType operation,
         @JsonProperty("unit-cost")
         double unitCost,
         int quantity
