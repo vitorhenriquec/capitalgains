@@ -3,27 +3,21 @@ package domain.usecase;
 import com.capitalgains.domain.model.TradeOrder;
 import com.capitalgains.domain.usecase.LineReaderUseCase;
 import com.capitalgains.domain.usecase.LineReaderUseCaseImpl;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.MockedStatic;
 
 import java.io.ByteArrayInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.mockStatic;
 
 public class LineReaderUseCaseImplTest {
     private LineReaderUseCase lineReader;
-    private ObjectMapper mapper;
 
     @BeforeEach
     public void setUp(){
         lineReader = new LineReaderUseCaseImpl();
-        mapper = new ObjectMapper();
     }
 
     @Test
@@ -47,29 +41,23 @@ public class LineReaderUseCaseImplTest {
 
     @Test
     public void testProcessLinesWithEmptyInput() throws Exception {
-        // Simula uma entrada vazia
         String input = "";
         InputStream inputStream = new ByteArrayInputStream(input.getBytes());
         System.setIn(inputStream);
 
-        // Executa o método a ser testado
         List<List<TradeOrder>> result = lineReader.processLines(new String[]{});
 
-        // Verifica que o resultado é uma lista vazia
         assertEquals(0, result.size());
     }
 
     @Test
     public void testProcessLinesWithInvalidJson() throws Exception {
-        // Simula uma entrada com JSON inválido
         String input = "invalid json";
         InputStream inputStream = new ByteArrayInputStream(input.getBytes());
         System.setIn(inputStream);
 
-        // Executa o método a ser testado
         List<List<TradeOrder>> result = lineReader.processLines(new String[]{});
 
-        // Verifica que o resultado é uma lista vazia
         assertEquals(0, result.size());
     }
 }

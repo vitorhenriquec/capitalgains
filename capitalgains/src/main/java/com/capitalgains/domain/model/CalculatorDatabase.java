@@ -7,7 +7,7 @@ public class CalculatorDatabase {
 
     private final double minCostForTaxing = 20000;
 
-    private double profit;
+    private double profit = 0;
 
     public int getAmountActualShares() {
         return amountActualShares;

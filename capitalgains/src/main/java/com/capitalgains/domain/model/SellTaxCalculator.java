@@ -7,15 +7,15 @@ public class SellTaxCalculator implements OperationTaxCalculator {
         calculatorDatabase.setAmountActualShares(calculatorDatabase.getAmountActualShares() - tradeOrder.quantity());
         calculatorDatabase.setProfit(calculateWeightedAveragePrice(tradeOrder, calculatorDatabase));
 
-        if(tradeOrder.quantity() * tradeOrder.unitCost() < calculatorDatabase.getMinCostForTaxing()){
+        if(shouldNotPayTax(tradeOrder, calculatorDatabase)){
             return 0.00;
         }
 
-        if(calculatorDatabase.getProfit() <= 0) {
-            return (0.00);
-        }
-
         return calculatorDatabase.getProfit()*0.2;
+    }
+
+    private static boolean shouldNotPayTax(TradeOrder tradeOrder, CalculatorDatabase calculatorDatabase) {
+        return tradeOrder.quantity() * tradeOrder.unitCost() < calculatorDatabase.getMinCostForTaxing() || calculatorDatabase.getProfit() <= 0;
     }
 
     private double calculateWeightedAveragePrice(TradeOrder tradeOrder, CalculatorDatabase calculatorDatabase) {
