@@ -64,7 +64,7 @@ public class CalculatorUseCaseImplTest {
     }
 
     @Test
-    void testCalculateSellWithNoTaxAndDebt() {
+    void testCalculateSellWithNoTaxAndLoss() {
         TradeOrder tradeOrder = new TradeOrder(OperationType.SELL, 5, 5000);
         TradeTax expectedTradeTax = new TradeTax(0.0);
 
