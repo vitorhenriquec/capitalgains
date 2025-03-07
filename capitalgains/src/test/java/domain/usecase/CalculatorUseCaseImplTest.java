@@ -7,6 +7,7 @@ import com.capitalgains.domain.model.TradeTax;
 import com.capitalgains.domain.usecase.CalculatorUseCaseImpl;
 import org.junit.jupiter.api.Test;
 
+import static com.capitalgains.infrastructure.util.FormatConverter.toBigDecimal;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CalculatorUseCaseImplTest {
@@ -14,7 +15,7 @@ public class CalculatorUseCaseImplTest {
     @Test
     void testCalculateBuyTradeTax() {
         TradeOrder tradeOrder = new TradeOrder(OperationType.BUY, 10.00, 100);
-        TradeTax expectedTradeTax = new TradeTax(0);
+        TradeTax expectedTradeTax = new TradeTax(toBigDecimal(0));
 
         CalculatorDatabase database = new CalculatorDatabase();
         CalculatorUseCaseImpl calculatorUseCase = new CalculatorUseCaseImpl(database);
@@ -30,7 +31,7 @@ public class CalculatorUseCaseImplTest {
     @Test
     void testCalculateSellWithNoTax() {
         TradeOrder tradeOrder = new TradeOrder(OperationType.SELL, 20.00, 50);
-        TradeTax expectedTradeTax = new TradeTax(0.0);
+        TradeTax expectedTradeTax = new TradeTax(toBigDecimal(0));
 
         CalculatorDatabase database = new CalculatorDatabase();
         database.setAmountActualShares(10000);
@@ -40,7 +41,7 @@ public class CalculatorUseCaseImplTest {
         TradeTax result = calculatorUseCase.calculateTradeTax(tradeOrder, tradeOrder.operation().getOperationTaxCalculator());
 
         assertEquals(expectedTradeTax.tax(), result.tax());
-        assertEquals(database.getDebt(), 500);
+        assertEquals(database.getDebt(), 0);
         assertEquals(database.getAmountActualShares(), 9950);
         assertEquals(database.getMeanBuyShareValue(), 10);
     }
@@ -48,7 +49,7 @@ public class CalculatorUseCaseImplTest {
     @Test
     void testCalculateSellWithNoTaxAndNoProfit() {
         TradeOrder tradeOrder = new TradeOrder(OperationType.SELL, 10, 5000);
-        TradeTax expectedTradeTax = new TradeTax(0.0);
+        TradeTax expectedTradeTax = new TradeTax(toBigDecimal(0));
 
         CalculatorDatabase database = new CalculatorDatabase();
         database.setAmountActualShares(10000);
@@ -66,7 +67,7 @@ public class CalculatorUseCaseImplTest {
     @Test
     void testCalculateSellWithNoTaxAndLoss() {
         TradeOrder tradeOrder = new TradeOrder(OperationType.SELL, 5, 5000);
-        TradeTax expectedTradeTax = new TradeTax(0.0);
+        TradeTax expectedTradeTax = new TradeTax(toBigDecimal(0));
 
         CalculatorDatabase database = new CalculatorDatabase();
         database.setAmountActualShares(10000);
@@ -84,7 +85,7 @@ public class CalculatorUseCaseImplTest {
     @Test
     void testCalculateSellWithSomeTax() {
         TradeOrder tradeOrder = new TradeOrder(OperationType.SELL, 15, 5000);
-        TradeTax expectedTradeTax = new TradeTax(5000.0);
+        TradeTax expectedTradeTax = new TradeTax(toBigDecimal(5000));
 
         CalculatorDatabase database = new CalculatorDatabase();
         database.setAmountActualShares(10000);
@@ -94,7 +95,7 @@ public class CalculatorUseCaseImplTest {
         TradeTax result = calculatorUseCase.calculateTradeTax(tradeOrder, tradeOrder.operation().getOperationTaxCalculator());
 
         assertEquals(expectedTradeTax.tax(), result.tax());
-        assertEquals(database.getDebt(), 25000);
+        assertEquals(database.getDebt(), 0);
         assertEquals(database.getAmountActualShares(), 5000);
         assertEquals(database.getMeanBuyShareValue(), 10);
     }

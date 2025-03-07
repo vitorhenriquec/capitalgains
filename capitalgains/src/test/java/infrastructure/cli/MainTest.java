@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 
+import static com.capitalgains.infrastructure.util.FormatConverter.toBigDecimal;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MainTest {
@@ -23,9 +24,9 @@ public class MainTest {
 
         assertEquals( 1, result.size());
         assertEquals(3, result.get(0).size());
-        assertEquals( 0, result.get(0).get(0).tax());
-        assertEquals(0, result.get(0).get(1).tax());
-        assertEquals(0, result.get(0).get(2).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(0).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(1).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(2).tax());
     }
 
     @Test
@@ -41,9 +42,9 @@ public class MainTest {
 
         assertEquals( 1, result.size());
         assertEquals(3, result.get(0).size());
-        assertEquals( 0, result.get(0).get(0).tax());
-        assertEquals(10000, result.get(0).get(1).tax());
-        assertEquals(0, result.get(0).get(2).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(0).tax());
+        assertEquals(toBigDecimal(10000), result.get(0).get(1).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(2).tax());
     }
 
     @Test
@@ -65,14 +66,14 @@ public class MainTest {
         assertEquals( 2, result.size());
 
         assertEquals(3, result.get(0).size());
-        assertEquals( 0, result.get(0).get(0).tax());
-        assertEquals(0, result.get(0).get(1).tax());
-        assertEquals(0, result.get(0).get(2).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(0).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(1).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(2).tax());
 
         assertEquals(3, result.get(1).size());
-        assertEquals( 0, result.get(1).get(0).tax());
-        assertEquals(10000, result.get(1).get(1).tax());
-        assertEquals(0, result.get(1).get(2).tax());
+        assertEquals(toBigDecimal(0), result.get(1).get(0).tax());
+        assertEquals(toBigDecimal(10000), result.get(1).get(1).tax());
+        assertEquals(toBigDecimal(0), result.get(1).get(2).tax());
     }
 
     @Test
@@ -88,9 +89,9 @@ public class MainTest {
 
         assertEquals( 1, result.size());
         assertEquals(3, result.get(0).size());
-        assertEquals( 0, result.get(0).get(0).tax());
-        assertEquals(0, result.get(0).get(1).tax());
-        assertEquals(1000, result.get(0).get(2).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(0).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(1).tax());
+        assertEquals(toBigDecimal(1000), result.get(0).get(2).tax());
     }
 
     @Test
@@ -106,16 +107,16 @@ public class MainTest {
 
         assertEquals( 1, result.size());
         assertEquals(3, result.get(0).size());
-        assertEquals( 0, result.get(0).get(0).tax());
-        assertEquals(0, result.get(0).get(1).tax());
-        assertEquals(0, result.get(0).get(2).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(0).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(1).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(2).tax());
     }
 
     @Test
     public void shouldCalculateWithNoProfitAndNoLossFollowedByProfit(){
         String input = "[{\"operation\":\"buy\", \"unit-cost\":10, \"quantity\": 10000}," +
                 "{\"operation\":\"buy\", \"unit-cost\":25, \"quantity\": 5000},"+
-                "{\"operation\":\"sell\", \"unit-cost\":15, \"quantity\": 10000}]" +
+                "{\"operation\":\"sell\", \"unit-cost\":15, \"quantity\": 10000}," +
                 "{\"operation\":\"sell\", \"unit-cost\":25, \"quantity\": 5000}]\n";
 
         InputStream inputStream = new ByteArrayInputStream(input.getBytes());
@@ -125,10 +126,10 @@ public class MainTest {
 
         assertEquals( 1, result.size());
         assertEquals(4, result.get(0).size());
-        assertEquals( 0, result.get(0).get(0).tax());
-        assertEquals(0, result.get(0).get(1).tax());
-        assertEquals(0, result.get(0).get(2).tax());
-        assertEquals(10000, result.get(0).get(3).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(0).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(1).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(2).tax());
+        assertEquals(toBigDecimal(10000), result.get(0).get(3).tax());
     }
 
     @Test
@@ -146,11 +147,11 @@ public class MainTest {
 
         assertEquals( 1, result.size());
         assertEquals(5, result.get(0).size());
-        assertEquals( 0, result.get(0).get(0).tax());
-        assertEquals(0, result.get(0).get(1).tax());
-        assertEquals(0, result.get(0).get(2).tax());
-        assertEquals(0, result.get(0).get(3).tax());
-        assertEquals(3000, result.get(0).get(4).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(0).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(1).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(2).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(3).tax());
+        assertEquals(toBigDecimal(3000), result.get(0).get(4).tax());
     }
 
     @Test
@@ -172,14 +173,14 @@ public class MainTest {
 
         assertEquals( 1, result.size());
         assertEquals(9, result.get(0).size());
-        assertEquals( 0, result.get(0).get(0).tax());
-        assertEquals(0, result.get(0).get(1).tax());
-        assertEquals(0, result.get(0).get(2).tax());
-        assertEquals(0, result.get(0).get(3).tax());
-        assertEquals(3000, result.get(0).get(4).tax());
-        assertEquals(0, result.get(0).get(5).tax());
-        assertEquals(0, result.get(0).get(6).tax());
-        assertEquals(3700, result.get(0).get(7).tax());
-        assertEquals(0, result.get(0).get(8).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(0).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(1).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(2).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(3).tax());
+        assertEquals(toBigDecimal(3000), result.get(0).get(4).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(5).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(6).tax());
+        assertEquals(toBigDecimal(3700), result.get(0).get(7).tax());
+        assertEquals(toBigDecimal(0), result.get(0).get(8).tax());
     }
 }

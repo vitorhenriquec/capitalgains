@@ -5,6 +5,8 @@ import com.capitalgains.domain.model.OperationTaxCalculator;
 import com.capitalgains.domain.model.TradeOrder;
 import com.capitalgains.domain.model.TradeTax;
 
+import static com.capitalgains.infrastructure.util.FormatConverter.toBigDecimal;
+
 public class CalculatorUseCaseImpl implements CalculatorUseCase {
 
     private CalculatorDatabase calculatorDatabase;
@@ -25,7 +27,7 @@ public class CalculatorUseCaseImpl implements CalculatorUseCase {
     public TradeTax calculateTradeTax(TradeOrder tradeOrder, OperationTaxCalculator operation) {
 
         return new TradeTax(
-                operation.calculate(tradeOrder, calculatorDatabase)
+                toBigDecimal(operation.calculate(tradeOrder, calculatorDatabase))
         );
     }
 }
