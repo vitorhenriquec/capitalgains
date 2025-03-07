@@ -7,7 +7,7 @@ public class CalculatorDatabase {
 
     private final double minCostForTaxing = 20000;
 
-    private double profit = 0;
+    private double debt = 0;
 
     public int getAmountActualShares() {
         return amountActualShares;
@@ -24,12 +24,12 @@ public class CalculatorDatabase {
     public void setMeanBuyShareValue(double meanBuyShareValue) {
         this.meanBuyShareValue = meanBuyShareValue;
     }
-    public double getProfit() {
-        return profit;
+    public double getDebt() {
+        return debt;
     }
 
-    public void setProfit(double profit) {
-        this.profit = profit;
+    public void setDebt(double debt) {
+        this.debt = debt;
     }
 
     public double getMinCostForTaxing() {

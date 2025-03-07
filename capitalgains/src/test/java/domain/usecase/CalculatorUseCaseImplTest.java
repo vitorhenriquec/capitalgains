@@ -22,7 +22,7 @@ public class CalculatorUseCaseImplTest {
         TradeTax result = calculatorUseCase.calculateTradeTax(tradeOrder, tradeOrder.operation().getOperationTaxCalculator());
 
         assertEquals(expectedTradeTax.tax(), result.tax());
-        assertEquals(database.getProfit(), 0);
+        assertEquals(database.getDebt(), 0);
         assertEquals(database.getAmountActualShares(), 100);
         assertEquals(database.getMeanBuyShareValue(), 10);
     }
@@ -40,7 +40,7 @@ public class CalculatorUseCaseImplTest {
         TradeTax result = calculatorUseCase.calculateTradeTax(tradeOrder, tradeOrder.operation().getOperationTaxCalculator());
 
         assertEquals(expectedTradeTax.tax(), result.tax());
-        assertEquals(database.getProfit(), 500);
+        assertEquals(database.getDebt(), 500);
         assertEquals(database.getAmountActualShares(), 9950);
         assertEquals(database.getMeanBuyShareValue(), 10);
     }
@@ -58,7 +58,7 @@ public class CalculatorUseCaseImplTest {
         TradeTax result = calculatorUseCase.calculateTradeTax(tradeOrder, tradeOrder.operation().getOperationTaxCalculator());
 
         assertEquals(expectedTradeTax.tax(), result.tax());
-        assertEquals(database.getProfit(), 0);
+        assertEquals(database.getDebt(), 0);
         assertEquals(database.getAmountActualShares(), 5000);
         assertEquals(database.getMeanBuyShareValue(), 10);
     }
@@ -76,7 +76,7 @@ public class CalculatorUseCaseImplTest {
         TradeTax result = calculatorUseCase.calculateTradeTax(tradeOrder, tradeOrder.operation().getOperationTaxCalculator());
 
         assertEquals(expectedTradeTax.tax(), result.tax());
-        assertEquals(database.getProfit(), -25000);
+        assertEquals(database.getDebt(), -25000);
         assertEquals(database.getAmountActualShares(), 5000);
         assertEquals(database.getMeanBuyShareValue(), 10);
     }
@@ -94,7 +94,7 @@ public class CalculatorUseCaseImplTest {
         TradeTax result = calculatorUseCase.calculateTradeTax(tradeOrder, tradeOrder.operation().getOperationTaxCalculator());
 
         assertEquals(expectedTradeTax.tax(), result.tax());
-        assertEquals(database.getProfit(), 25000);
+        assertEquals(database.getDebt(), 25000);
         assertEquals(database.getAmountActualShares(), 5000);
         assertEquals(database.getMeanBuyShareValue(), 10);
     }
