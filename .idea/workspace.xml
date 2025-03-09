@@ -1,18 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b99aa486-64ad-43d3-a716-02d9c1d868c4" name="Changes" comment="" />
+    <list default="true" id="b99aa486-64ad-43d3-a716-02d9c1d868c4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capitalgains.iml" beforeDir="false" afterPath="$PROJECT_DIR$/capitalgains.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capitalgains/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capitalgains/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/domain/model/BuyTaxCalculator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/domain/model/CalculatorDatabase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/domain/model/OperationTaxCalculator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/domain/model/OperationType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/domain/model/SellTaxCalculator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/domain/model/TradeOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/domain/model/TradeTax.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/domain/usecase/CalculatorUseCase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/domain/usecase/CalculatorUseCaseImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/domain/usecase/LineReaderUseCase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/domain/usecase/LineReaderUseCaseImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/infrastructure/cli/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/infrastructure/util/FormatConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capitalgains/src/test/java/domain/usecase/CalculatorUseCaseImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capitalgains/src/test/java/domain/usecase/LineReaderUseCaseImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/capitalgains/src/test/java/infrastructure/cli/MainTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/CG-0002" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2tuSdfqrck8GtcF3HtyEMrJMfEz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -22,10 +55,33 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="LineReaderUseCaseImplTest.shouldProcessLinesWithValidInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capitalgains" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="domain.usecase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="domain.usecase" />
+      <option name="MAIN_CLASS_NAME" value="domain.usecase.LineReaderUseCaseImplTest" />
+      <option name="METHOD_NAME" value="shouldProcessLinesWithValidInput" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.LineReaderUseCaseImplTest.shouldProcessLinesWithValidInput" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
