@@ -14,17 +14,11 @@ public class Main {
     public static void main(String[] args) {
         var tradeTaxes = calculateTax(args);
         System.out.println(tradeTaxes);
+        System.exit(0);
     }
 
     public static List<List<TradeTax>> calculateTax(String[] args) {
-        var tradeOrders = lineReader.processLines(args);
-
-        return tradeOrders.stream().map(tradeOrder -> {
-            CalculatorUseCase calculator = new CalculatorUseCaseImpl();
-            return tradeOrder.stream().map(
-                    it -> calculator.calculateTradeTax(it, it.operation().getOperationTaxCalculator())
-            ).toList();
-        }).toList();
+        return lineReader.processLines(args);
     }
 
 }

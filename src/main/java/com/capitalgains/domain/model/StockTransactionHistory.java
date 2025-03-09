@@ -1,6 +1,6 @@
 package com.capitalgains.domain.model;
 
-public class CalculatorDatabase {
+public class StockTransactionHistory {
     private int amountActualShares = 0;
 
     private double meanBuyShareValue = 0;

@@ -1,5 +1,8 @@
 package com.capitalgains.domain.model;
 
+import com.capitalgains.domain.usecase.BuyTaxCalculator;
+import com.capitalgains.domain.usecase.OperationTaxCalculator;
+import com.capitalgains.domain.usecase.SellTaxCalculator;
 import com.fasterxml.jackson.annotation.JsonCreator;
 
 import java.util.Arrays;
