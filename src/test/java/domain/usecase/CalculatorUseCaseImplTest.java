@@ -1,6 +1,6 @@
 package domain.usecase;
 
-import com.capitalgains.domain.model.CalculatorDatabase;
+import com.capitalgains.domain.model.StockTransactionHistory;
 import com.capitalgains.domain.model.OperationType;
 import com.capitalgains.domain.model.TradeOrder;
 import com.capitalgains.domain.model.TradeTax;
@@ -17,7 +17,7 @@ public class CalculatorUseCaseImplTest {
         TradeOrder tradeOrder = new TradeOrder(OperationType.BUY, 10.00, 100);
         TradeTax expectedTradeTax = new TradeTax(toBigDecimal(0));
 
-        CalculatorDatabase database = new CalculatorDatabase();
+        StockTransactionHistory database = new StockTransactionHistory();
         CalculatorUseCaseImpl calculatorUseCase = new CalculatorUseCaseImpl(database);
 
         TradeTax result = calculatorUseCase.calculateTradeTax(tradeOrder, tradeOrder.operation().getOperationTaxCalculator());
@@ -33,7 +33,7 @@ public class CalculatorUseCaseImplTest {
         TradeOrder tradeOrder = new TradeOrder(OperationType.SELL, 20.00, 50);
         TradeTax expectedTradeTax = new TradeTax(toBigDecimal(0));
 
-        CalculatorDatabase database = new CalculatorDatabase();
+        StockTransactionHistory database = new StockTransactionHistory();
         database.setAmountActualShares(10000);
         database.setMeanBuyShareValue(10);
         CalculatorUseCaseImpl calculatorUseCase = new CalculatorUseCaseImpl(database);
@@ -51,7 +51,7 @@ public class CalculatorUseCaseImplTest {
         TradeOrder tradeOrder = new TradeOrder(OperationType.SELL, 10, 5000);
         TradeTax expectedTradeTax = new TradeTax(toBigDecimal(0));
 
-        CalculatorDatabase database = new CalculatorDatabase();
+        StockTransactionHistory database = new StockTransactionHistory();
         database.setAmountActualShares(10000);
         database.setMeanBuyShareValue(10);
         CalculatorUseCaseImpl calculatorUseCase = new CalculatorUseCaseImpl(database);
@@ -69,7 +69,7 @@ public class CalculatorUseCaseImplTest {
         TradeOrder tradeOrder = new TradeOrder(OperationType.SELL, 5, 5000);
         TradeTax expectedTradeTax = new TradeTax(toBigDecimal(0));
 
-        CalculatorDatabase database = new CalculatorDatabase();
+        StockTransactionHistory database = new StockTransactionHistory();
         database.setAmountActualShares(10000);
         database.setMeanBuyShareValue(10);
         CalculatorUseCaseImpl calculatorUseCase = new CalculatorUseCaseImpl(database);
@@ -87,7 +87,7 @@ public class CalculatorUseCaseImplTest {
         TradeOrder tradeOrder = new TradeOrder(OperationType.SELL, 15, 5000);
         TradeTax expectedTradeTax = new TradeTax(toBigDecimal(5000));
 
-        CalculatorDatabase database = new CalculatorDatabase();
+        StockTransactionHistory database = new StockTransactionHistory();
         database.setAmountActualShares(10000);
         database.setMeanBuyShareValue(10);
         CalculatorUseCaseImpl calculatorUseCase = new CalculatorUseCaseImpl(database);

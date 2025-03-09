@@ -5,35 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b99aa486-64ad-43d3-a716-02d9c1d868c4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capitalgains.iml" beforeDir="false" afterPath="$PROJECT_DIR$/capitalgains.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capitalgains/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capitalgains/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/domain/model/BuyTaxCalculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/domain/model/CalculatorDatabase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/domain/model/OperationTaxCalculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/domain/model/OperationType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/domain/model/SellTaxCalculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/domain/model/TradeOrder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/domain/model/TradeTax.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/domain/usecase/CalculatorUseCase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/domain/usecase/CalculatorUseCaseImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/domain/usecase/LineReaderUseCase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/domain/usecase/LineReaderUseCaseImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/infrastructure/cli/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capitalgains/src/main/java/com/capitalgains/infrastructure/util/FormatConverter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capitalgains/src/test/java/domain/usecase/CalculatorUseCaseImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capitalgains/src/test/java/domain/usecase/LineReaderUseCaseImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/capitalgains/src/test/java/infrastructure/cli/MainTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capitalgains/domain/model/BuyTaxCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capitalgains/domain/usecase/BuyTaxCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capitalgains/domain/model/CalculatorDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capitalgains/domain/model/StockTransactionHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capitalgains/domain/model/OperationTaxCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capitalgains/domain/usecase/OperationTaxCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capitalgains/domain/model/OperationType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capitalgains/domain/model/OperationType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capitalgains/domain/model/SellTaxCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capitalgains/domain/usecase/SellTaxCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capitalgains/domain/usecase/CalculatorUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capitalgains/domain/usecase/CalculatorUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capitalgains/domain/usecase/CalculatorUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capitalgains/domain/usecase/CalculatorUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capitalgains/domain/usecase/LineReaderUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capitalgains/domain/usecase/LineReaderUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capitalgains/domain/usecase/LineReaderUseCaseImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capitalgains/domain/usecase/LineReaderUseCaseImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/capitalgains/infrastructure/cli/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/capitalgains/infrastructure/cli/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/domain/usecase/CalculatorUseCaseImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/domain/usecase/CalculatorUseCaseImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/domain/usecase/LineReaderUseCaseImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/domain/usecase/LineReaderUseCaseImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -54,12 +54,52 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
+    "JUnit.LineReaderUseCaseImplTest.shouldProcessLinesWithValidInput.executor": "Debug",
+    "JUnit.java in capitalgains.executor": "Run",
+    "Maven.capitalgains [clean,compile].executor": "Run",
+    "Maven.capitalgains [clean,package].executor": "Run",
+    "Maven.capitalgains [clean,test].executor": "Run",
+    "Maven.capitalgains [exec:java...].executor": "Run",
+    "Maven.capitalgains [install].executor": "Run",
+    "Maven.capitalgains [test].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/vhcbv/Documents/obama"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.capitalgains.infrastructure.entity" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn install" />
+      <command value="mvn test" />
+      <command value="mvn exec:java -Dexec.mainClass=com.capitalgains.infrastructure.cli.Main " />
+      <command value="mvn exec:java -Dexec.mainClass=com.capitalgains.infrastructure.cli.Main -Dexec.args=&quot;[{&quot;operation&quot;:&quot;buy&quot;, &quot;unit-cost&quot;:10.00, &quot;quantity&quot;: 100}, {&quot;operation&quot;:&quot;sell&quot;, &quot;unit-cost&quot;:15.00, &quot;quantity&quot;: 50}, {&quot;operation&quot;:&quot;sell&quot;, &quot;unit-cost&quot;:15.00, &quot;quantity&quot;: 50}]&quot;" />
+      <command value="mvn clean package " />
+      <command value="mvn exec:java -Dexec.mainClass=com.capitalgains.infrastructure.cli.Main -Dexec.args=&quot;[{&quot;operation&quot;:&quot;buy&quot;, &quot;unit-cost&quot;:10.00, &quot;quantity&quot;: 100},{&quot;operation&quot;:&quot;sell&quot;, &quot;unit-cost&quot;:15.00, &quot;quantity&quot;: 50},{&quot;operation&quot;:&quot;sell&quot;, &quot;unit-cost&quot;:15.00, &quot;quantity&quot;: 50}]&quot;" />
+      <command value="mvn clean compile" />
+      <command value="mvn clean package" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.LineReaderUseCaseImplTest.shouldProcessLinesWithValidInput">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.capitalgains.infrastructure.cli.Main" />
+      <module name="capitalgains" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.capitalgains.infrastructure.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LineReaderUseCaseImplTest.shouldProcessLinesWithValidInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="capitalgains" />
       <extension name="coverage">
@@ -76,9 +116,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="java in capitalgains" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capitalgains" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.LineReaderUseCaseImplTest.shouldProcessLinesWithValidInput" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.java in capitalgains" />
       </list>
     </recent_temporary>
   </component>
@@ -92,5 +142,26 @@
       <updated>1741200557597</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/capitalgains/infrastructure/cli/Main.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/capitalgains/infrastructure/cli/Main.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/domain/usecase/LineReaderUseCaseImplTest.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

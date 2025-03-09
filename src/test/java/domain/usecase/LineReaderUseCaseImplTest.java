@@ -1,6 +1,6 @@
 package domain.usecase;
 
-import com.capitalgains.domain.model.TradeOrder;
+import com.capitalgains.domain.model.TradeTax;
 import com.capitalgains.domain.usecase.LineReaderUseCase;
 import com.capitalgains.domain.usecase.LineReaderUseCaseImpl;
 import org.junit.jupiter.api.BeforeEach;
@@ -28,15 +28,9 @@ public class LineReaderUseCaseImplTest {
         InputStream inputStream = new ByteArrayInputStream(input.getBytes());
         System.setIn(inputStream);
 
-        List<List<TradeOrder>> result = lineReader.processLines(new String[]{});
+        List<List<TradeTax>> result = lineReader.processLines(new String[]{});
 
         assertEquals(2, result.size());
-        assertEquals("buy", result.get(0).get(0).operation().getDescription());
-        assertEquals(10.00, result.get(0).get(0).unitCost());
-        assertEquals(10000, result.get(0).get(0).quantity());
-        assertEquals("sell", result.get(1).get(0).operation().getDescription());
-        assertEquals(20.00, result.get(1).get(0).unitCost());
-        assertEquals(5000, result.get(1).get(0).quantity());
     }
 
     @Test
@@ -45,7 +39,7 @@ public class LineReaderUseCaseImplTest {
         InputStream inputStream = new ByteArrayInputStream(input.getBytes());
         System.setIn(inputStream);
 
-        List<List<TradeOrder>> result = lineReader.processLines(new String[]{});
+        List<List<TradeTax>> result = lineReader.processLines(new String[]{});
 
         assertEquals(0, result.size());
     }
@@ -56,7 +50,7 @@ public class LineReaderUseCaseImplTest {
         InputStream inputStream = new ByteArrayInputStream(input.getBytes());
         System.setIn(inputStream);
 
-        List<List<TradeOrder>> result = lineReader.processLines(new String[]{});
+        List<List<TradeTax>> result = lineReader.processLines(new String[]{});
 
         assertEquals(0, result.size());
     }

@@ -1,7 +1,6 @@
 package com.capitalgains.domain.usecase;
 
-import com.capitalgains.domain.model.CalculatorDatabase;
-import com.capitalgains.domain.model.OperationTaxCalculator;
+import com.capitalgains.domain.model.StockTransactionHistory;
 import com.capitalgains.domain.model.TradeOrder;
 import com.capitalgains.domain.model.TradeTax;
 
@@ -9,25 +8,25 @@ import static com.capitalgains.infrastructure.util.FormatConverter.toBigDecimal;
 
 public class CalculatorUseCaseImpl implements CalculatorUseCase {
 
-    private CalculatorDatabase calculatorDatabase;
+    private StockTransactionHistory stockTransactionHistory;
 
     public CalculatorUseCaseImpl() {
-        this.calculatorDatabase = new CalculatorDatabase();
+        this.stockTransactionHistory = new StockTransactionHistory();
     }
 
-    public CalculatorUseCaseImpl(CalculatorDatabase calculatorDatabase) {
-        this.calculatorDatabase = calculatorDatabase;
+    public CalculatorUseCaseImpl(StockTransactionHistory stockTransactionHistory) {
+        this.stockTransactionHistory = stockTransactionHistory;
     }
 
-    public CalculatorDatabase getCalculatorDatabase() {
-        return calculatorDatabase;
+    public StockTransactionHistory getCalculatorDatabase() {
+        return stockTransactionHistory;
     }
 
     @Override
     public TradeTax calculateTradeTax(TradeOrder tradeOrder, OperationTaxCalculator operation) {
 
         return new TradeTax(
-                toBigDecimal(operation.calculate(tradeOrder, calculatorDatabase))
+                toBigDecimal(operation.calculate(tradeOrder, stockTransactionHistory))
         );
     }
 }
